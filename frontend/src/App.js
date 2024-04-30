@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import HomeAdmin from "./HomeAdmin";
 import HomeUser from "./HomeUser";
 import HomeVigilante from "./HomeVigilante";
@@ -33,13 +28,11 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Login setUserRole={setUserRole} />} />
-        <Route
-          path="/home"
-          element={userRole ? renderHome() : <Navigate to="/" />}
-        />
+        <Route path="/home" element={userRole ? renderHome() : <Navigate to="/" />} />
       </Routes>
     </Router>
   );
 };
 
 export default App;
+

@@ -17,9 +17,7 @@ const Login = ({ setUserRole }) => {
         password,
       });
       console.log("Inicio de sesión exitoso:", response.data);
-      // Seteamos el rol del usuario en el estado global
       setUserRole(response.data.rol);
-      // Redirige al usuario a la página de inicio correspondiente después del inicio de sesión exitoso
       navigate("/home");
     } catch (error) {
       console.error(
